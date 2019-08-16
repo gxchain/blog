@@ -41,4 +41,4 @@ branches:
 
 env:
   global: # 全局变量，上面的提交到github的命令有用到
-  - GH_REF: github.com/leaf930814/travis-blog.io.git 
+  - GH_REF: github.com/gxchain/blog.git 

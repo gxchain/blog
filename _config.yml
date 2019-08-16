@@ -12,12 +12,11 @@ description: A Trusted Data Internet of Value
 author: 
 language: zh-cn
 timezone: Asia/Shanghai
-subdirectory: /travis-blog.io 
 
 # URL 
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://leaf930814.github.io
-root: /travis-blog.io/zh
+url: https://github.com/
+root: /blog/zh
 sub_path: /travis-blog.io
 permalink: notes/:year/:month/:day/:title/
 permalink_defaults:
