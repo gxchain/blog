@@ -26,18 +26,18 @@ script:
 - hexo g --config _config.en.yml 
 - cp index.html public/
 
-after_success: # 执行script成功后，进入到public，把里面的代码提交到博客的gh-pages分支
+after_success: # 执行script成功后，进入到public，把里面的代码提交到博客的blog-resource分支
 - cd ./public
 - git init
 - git config user.name "leaf930814"
 - git config user.email "leaf930814@163.com"
 - git add .
 - git commit -m "Update site"
-- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 branches:
   only:
-  - master # CI 只针对分支 master
+  - blog-resource # CI 只针对分支 blog-resource
 
 env:
   global: # 全局变量，上面的提交到github的命令有用到
