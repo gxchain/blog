@@ -122,7 +122,7 @@ deploy:
   type: git
   message: Super BlockMan at {{ now('YYYY-MM-DD HH:mm:ss') }}
   repo: 
-    github: git@github.com:blockfe/blockfe.github.io.git,master
+    github: git@github.com:gxchain/blog.git,master
 
 # Disqus
 disqus_shortname:
@@ -135,8 +135,8 @@ ta_analytics: 53685723
 # Social
 twitter: blockfe
 github:
-  user: blockfe
-  repo: blockfe.github.io
+  user: gxchain
+  repo: blog
 
 # baidu sitemap
 baidusitemap:

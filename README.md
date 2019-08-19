@@ -19,7 +19,7 @@ blog.gxchain.org是一个托管于Github的静态博客，基于[o2team.github.i
     git clone git@github.com:gxchain/blog.git
     ```
 
-3. 切换Git分支至"dev-master"
+3. 切换Git分支至"master"
 
 4. 安装nodejs包
 
