@@ -1,5 +1,5 @@
 # blog.gxchain.org
-![Travis](https://travis-ci.org/blockfe/blockfe.github.io.svg?branch=hexo)
+![Travis](https://travis-ci.org/gxchain/blog.svg?branch=master)
 
 blog.gxchain.org是一个托管于Github的静态博客，基于[o2team.github.io](https://github.com/o2team/o2team.github.io)搭建。
 
@@ -27,23 +27,17 @@ blog.gxchain.org是一个托管于Github的静态博客，基于[o2team.github.i
     npm install
     ```
 
-5. 运行`hexo s --watch`
+5. 运行`npm run dev`
 
-    运行上述命令后，浏览器打开 [http://localhost:4000](http://localhost:4000) 即可本地访问我们的网站
+    运行上述命令后，浏览器打开 [http://localhost:4000/zh/](http://localhost:4000/zh/) 即可本地访问我们的网站
+    
+    > 英文版可以执行 `npm run dev:en`
     
 ## 创建文章
 
-有两种方法创建文章，可任选其一：
-
 > 注意：文件名不要出现中文!!!
 
-1. 使用`hexo new` 命令
-  
-  ``` bash
-  $ hexo new "My New Post"
-  ```
-
-2. 拷贝现有的文章进行修改
+ 拷贝现有的文章进行修改
   
   hexo使用markdown来编辑文章，在multi_source目录下，选择不同语言对应的文件夹，拷贝任意md文件进行创建新的文章。具体可参考下hexo的官方说明
 
@@ -80,4 +74,4 @@ blog.gxchain.org是一个托管于Github的静态博客，基于[o2team.github.i
 
 ## 关于博客的发布
 
-为了便于统一维护，博客的发布由`xLogic`负责。同学们写好博文并在本地预览OK后直接提交Github即可。  
+为了便于统一维护，写好博文并在本地预览OK后直接提交Github即可。  
