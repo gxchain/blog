@@ -4,9 +4,4 @@
 - text: Weekly
   value: weekly
   url: cates/weekly/index.html
-- text: The Study
-  value: study
-  url: cates/study/index.html
-- text: Technology Sharing
-  value: technology_sharing
-  url: cates/Technology-Sharing/index.html
+

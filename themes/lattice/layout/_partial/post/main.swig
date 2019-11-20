@@ -31,11 +31,7 @@
             {% endif %}
         </div>
 
-        {% if post.coeditor %}
-        <div class="post-announce">感谢您的阅读，本文由 <a href="{{ post.coeditor.url }}">{{ post.coeditor.name }}</a> 原创提供。如若转载，请注明出处：BlockFE（<a href="{{ url_for(post.path) }}">https://blockfe.github.io{{ url_for(post.path) }}</a>）</div> 
-        {% else %}
-        <div class="post-announce">感谢您的阅读，本文由 <a href="//blockfe.github.io">BlockFE</a> 版权所有。如若转载，请注明出处：BlockFE（<a href="https://blockfe.github.io{{ url_for(post.path) }}">https://blockfe.github.io{{ url_for(post.path) }}</a>）</div> 
-        {% endif %}
+
         <div class="post-revision">
             <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="{{ date_xml(post.updated) }}">{{ __('post.last_updated', full_date(post.updated)) }}</time>
          </div>
@@ -43,6 +39,6 @@
     </div>
 
     {% include 'prevnext.swig' %}
-    {% include '../common/comment.swig' %}
+
 
 </article>

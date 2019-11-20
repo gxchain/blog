@@ -1,6 +1,6 @@
 {
-  "name": "blockfe.github.io",
-  "version": "2.6.3",
+  "name": "blog.gxchain.org",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "rm -rf public && hexo clean && npm run build:zh && hexo s",

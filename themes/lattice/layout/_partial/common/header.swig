@@ -14,10 +14,6 @@
                     </ul>
                 </nav>
 
-                <div class="lang-wrap">
-                    <a href="{{ config.sub_path }}/zh/index.html">中</a>/<a href="{{ config.sub_path }}/en/index.html">EN</a>
-                </div>
-
                 <div class="mod-search" id="J_search">
                     <a class="fa fa-search mod-search-ico" id="J_searchTrigger" title="{{ __('menu.search') }}"></a>
                     <form id="J_searchForm" method="get" class="mod-search-form" action="/search/">
