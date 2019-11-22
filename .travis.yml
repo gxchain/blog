@@ -1,5 +1,5 @@
 language: node_js
-node_js: 6
+node_js: 10.13.0
 
 addons: # Travis CI建议加的，自动更新api
   apt:
@@ -20,17 +20,14 @@ script:
 - hexo clean
 - rm -rf source/_posts/* 
 - cp -r multi_source/zh/* source/_posts 
-- hexo g --config _config.yml 
-- rm -rf source/_posts/* 
-- cp -r multi_source/en/* source/_posts 
-- hexo g --config _config.en.yml 
+- hexo g --config _config.yml
 - cp index.html public/
 
 after_success: # 执行script成功后，进入到public，把里面的代码提交到博客的gh-pages分支
 - cd ./public
 - git init
-- git config user.name "leaf930814"
-- git config user.email "leaf930814@163.com"
+- git config user.name "haifun"
+- git config user.email "haifuncn@gmail.com"
 - git add .
 - git commit -m "Update site"
 - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages

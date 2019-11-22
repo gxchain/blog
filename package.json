@@ -9,7 +9,7 @@
     "copy:zh": "rm -rf source/_posts/*.md && cp -r multi_source/zh/* source/_posts",
     "build:en": "npm run copy:en && hexo g --config _config.en.yml",
     "build:zh": "npm run copy:zh && hexo g --config _config.yml",
-    "build": "rm -rf public && hexo clean && npm run build:zh && npm run build:en && cp index.html public/"
+    "build": "rm -rf public && hexo clean && npm run build:zh && cp index.html public/"
   },
   "hexo": {
     "version": "3.9.0"
