@@ -12,33 +12,69 @@
         {% endif %}
         <span style="display:none;" id="busuanzi_value_page_pv"></span>
     </header>
-    <div class="post-content">
-        {{ page_anchor(post.content) }}
+    <div id="post-container">
+        <div class="post-content " id="post-content">
 
-        <div class="post-tags" style="display: none">
-            {% if page.tags.length %}
-                {% for tag in page.tags %}
-                    <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
-                {% endfor %}
+        {% set category = '' %} {% for item in post.categories %}
+        {% if item.name == "周报" %}
+        {% set category = item.name %}
+        {% endif %}
+        {% endfor %}
+        {% if category == "周报" %}
+
+            <div id="post-content-header" style="display:none">
+                <div class="shage_title">GXChain{{ category }}</div>
+                <div class="shage_data">{{ post.daterange }}</div>
+            </div>
+            {% else %}
+            <div id="post-content-header" style="display:none">
+                <div class="shage_title_normal">{{ post.title }}</div>
+            </div>
             {% endif %}
+
+            {{ page_anchor(post.content) }}
+
+            <div class="post-tags" style="display: none">
+                {% if page.tags.length %}
+                    {% for tag in page.tags %}
+                        <a href="{{ url_for(tag.path) }}">{{ tag.name }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="post-categories" style="display: none">
+                {% if page.categories.length %}
+                    {% for cate in page.categories %}
+                        <a href="{{ url_for(cate.path) }}">{{ cate.name }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+
+            <div class="post-revision" style="display: none">
+                <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="{{ date_xml(post.updated) }}">{{ __('post.last_updated', full_date(post.updated)) }}</time>
+             </div>
+
+
         </div>
-
-        <div class="post-categories" style="display: none">
-            {% if page.categories.length %}
-                {% for cate in page.categories %}
-                    <a href="{{ url_for(cate.path) }}">{{ cate.name }}</a>
-                {% endfor %}
-            {% endif %}
-        </div>
-
-
-        <div class="post-revision">
-            <i class="fa fa-clock-o"></i> <time class="post-updated" datetime="{{ date_xml(post.updated) }}">{{ __('post.last_updated', full_date(post.updated)) }}</time>
-         </div>
-
+    </div>
+    <div>
+        <button id="downloadPic">一键导出图片</button>
     </div>
 
     {% include 'prevnext.swig' %}
 
 
 </article>
+<div id="layer-mask">
+        <div class="loadEffect">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>

@@ -14,3 +14,8 @@
         </div>
     </div>
 {% endblock %}
+
+{% block pagejs %}
+{{ js('js/libs/html2canvas') }}
+{{ js('js/share') }}
+{% endblock %}
